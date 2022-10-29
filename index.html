@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My List Movie</title>
+
+  <link rel="shortcut icon" href="./assets/fav-icon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+  <script src="./assets/js/script.js" type="module" defer></script>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div class="">
+        <p>Movies Fav</p>
+      </div>
+
+      <div class="nav_wrapper">
+        <a href="/" class="link_nav active">Movies</a>
+        <a href="/assets/pages/tvshow.html" class="link_nav">Tv Show</a>
+      </div>
+
+      <div class="search-wrapper">
+        <form class="form">
+          <input type="search" name="input_search" id="input_search" required
+          placeholder="Digite">
+        </form>
+      </div>
+    </header>
+
+    <div id="app">
+      <main>
+        <div class="swiper destaque_swiper">
+          <div class="swiper-wrapper">
+
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </main>
+
+    <section class="my_list-wrapper">
+      <p class="title">Minha Lista</p>
+        <div class="swiper my_list">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/08/19/a_casa_do_dragao_game_of_thrones_hbo_max-21583460.jpg" alt="">
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="section-wrapper">
+      <p class="title">Terror</p>
+      <div class="swiper my_list">
+        <div class="swiper-wrapper">
+        </div>
+      </div>
+     <div class="swiper-pagination"></div>
+    </section>
+  </div>
+
+  <footer>
+    <a href="#">API TMDB</a>
+    <span>Aplicação desenvolvida por Vinicius Oliveira</span>
+    <span>&copy;2021</span>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+         new Swiper(".my_list", {
+      spaceBetween: 30,
+      loop: true,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+    });
+  </script>
+</body>
+</html>
