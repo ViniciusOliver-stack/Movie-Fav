@@ -1,16 +1,19 @@
 @import url(./reset.css);
 
 body{
-  width: 100%;
+  width: 90%;
   height: 100vh;
+  border: 1px solid red;
   background-color: var(--bg);
   color: var(--fc-primary);
+  margin: 0 auto;
 }
 
 header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 3rem;
 }
 
 .nav_wrapper{
@@ -27,10 +30,16 @@ header p{
   line-height: 100%;
 }
 
-#container{
-  margin: 4.8rem 6.8rem;
+#title{
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  user-select: none;
 }
+#title img{
+  width: 12%; 
 
+}
 .form input{
   background: var(--bg-form);
   border: none;
@@ -56,7 +65,7 @@ header p{
 /*Swiper*/
 
 .swiper {
-  width: 100%;
+  width: 80%;
   height: 65vh;
   margin-top: 5rem;
   border-radius: 2rem;
@@ -64,7 +73,7 @@ header p{
 
 .swiper-slide {
   text-align: center;
-  background: #fff;
+  background: #fff; /*Remover!*/
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,7 +98,8 @@ header p{
   left: 2%;
 }
 
-.swiper_contents .swiper_content_buttons{
+.swiper_contents .swiper_content_buttons,
+.swiper-slide .swiper_content_buttons{
   position: absolute;
   left: 2%;
   bottom: 6%;
@@ -97,12 +107,13 @@ header p{
   justify-content: space-between;
   width: 97%;
 }
+
 .swiper_content_buttons button{
   font-weight: 800;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   line-height: 18px;
 
-  padding: 19px 25px;
+  padding: 15px 20px;
   border-radius: 15px;
   border: none;
 }
@@ -119,7 +130,7 @@ header p{
 
 .swiper_content_title span{
   font-weight: 800;
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   line-height: 48px;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
